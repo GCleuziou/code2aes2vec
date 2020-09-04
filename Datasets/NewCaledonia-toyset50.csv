@@ -1,0 +1,395 @@
+groupes,reussi,date,contenu,user__username,titre__titre,titre__hashCode
+,1,2020-05-04 22:29:55,"def premiereOccurrenceLettre(lettre,mot):
+    res=None
+    i=0
+    while i<len(mot) and res==None:
+      if lettre==mot[i]:
+        res=i
+      i+=1
+    return res",student1,premiereOccurrenceLettre,0e0f49f2073ce229d4ecf5c7f38eb773
+,0,2020-05-04 22:29:38,"def premiereOccurrenceLettre(lettre,mot):
+    res=None
+    i=0
+    while i<len(mot) and res:
+      if lettre==mot[i]:
+        res=i
+      i+=1
+    return res",student1,premiereOccurrenceLettre,0e0f49f2073ce229d4ecf5c7f38eb773
+,0,2020-05-04 22:29:30,"def premiereOccurrenceLettre(lettre,mot):
+  res=None
+  i=0
+  while i<len(mot) and res:
+    if mot[i]==lettre:
+      res=i
+    i+=1
+  return res",student2,premiereOccurrenceLettre,0e0f49f2073ce229d4ecf5c7f38eb773
+,1,2020-05-04 22:29:18,"def premiereOccurrenceLettre(lettre,mot):
+    res=None
+    i=0
+    while i<len(mot) and res==None:
+      if lettre==mot[i]:
+        res=i
+      i+=1
+    return res",student1,premiereOccurrenceLettre,0e0f49f2073ce229d4ecf5c7f38eb773
+,1,2020-05-04 22:18:14,"def nbOccurrencesLettre(lettre,mot):
+  res=0
+  for elem in mot:
+    if lettre==elem:
+      res+=1
+  return res",student2,nbOccurrencesLettre,2864c9e5861229d2ff32570f6bc944fb
+,1,2020-05-04 22:15:46,"def nbOccurrencesLettre(lettre,mot):
+  res=0
+  for elem in mot:
+    if lettre==elem:
+      res+=1
+  return res",student1,nbOccurrencesLettre,2864c9e5861229d2ff32570f6bc944fb
+,1,2020-05-04 22:11:51,"def ecart(liste):
+  if liste==[]:
+    res=None
+  else:
+    maxi=liste[0]
+    mini=liste[0]
+    for i in range(1,len(liste)):
+      if liste[i]<mini:
+        mini=liste[i]
+      elif liste[i]>maxi:
+        maxi=liste[i]
+    res=maxi-mini
+  return res",student2,ecart,3bd6b5ade783ad5db31a3df820edc748
+,0,2020-05-04 22:11:12,"def ecart(liste):
+  if liste==[]:
+    res=None
+  else:
+    maxi=liste[0]
+    mini=liste[0]
+    for i in range(1,len(liste)):
+      if liste[i]<mini:
+        mini=liste[i]
+      elif liste[i]>maxi:
+        maxi=liste[i]
+  return res",student2,ecart,3bd6b5ade783ad5db31a3df820edc748
+,0,2020-05-04 22:10:48,"def ecart(liste):
+  if liste==[]:
+    res=None
+  else:
+    maxi=liste[0]
+    mini=liste[0]
+    res=liste[0]
+    for i in range(1,len(liste)):
+      if liste[i]<mini:
+        mini=liste[i]
+      elif liste[i]>maxi:
+        maxi=liste[i]
+  return res",student2,ecart,3bd6b5ade783ad5db31a3df820edc748
+,1,2020-05-04 22:07:14,"def ecart(liste):
+  if liste==[]:
+    res=None
+  else:
+    max0=liste[0]
+    min0=liste[0]
+    for i in range(1,len(liste)):
+      if max0<liste[i]:
+        max0=liste[i]
+      if min0>liste[i]:
+        min0=liste[i]
+    res=max0-min0
+  return res",student1,ecart,3bd6b5ade783ad5db31a3df820edc748
+,0,2020-05-04 22:07:02,"def ecart(liste):
+  if liste==[]:
+    res=None
+  else:
+    max0=liste[0]
+    min0=liste[0]
+    for i in range(1,len(liste)):
+      if max0<liste[i]:
+        max0=lite[i]
+      if min0>liste[i]:
+        min0=liste[i]
+    res=max0-min0
+  return res",student1,ecart,3bd6b5ade783ad5db31a3df820edc748
+,1,2020-05-04 22:00:21,"def moyenne(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=0
+    for elem in liste:
+      res+=elem
+    res/=len(liste)
+  return res",student2,moyenne,6fc4a139f72ee6e245b9f97fcc15712e
+,0,2020-05-04 22:00:00,"def moyenne(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=0
+    for elem in liste:
+      res+=elem
+    res=len(liste)
+  return res",student2,moyenne,6fc4a139f72ee6e245b9f97fcc15712e
+,0,2020-05-04 21:59:44,"def moyenne(liste):
+  if liste==[]:
+    res=None
+    else:
+      res=0
+      for elem in liste:
+        res+=elem
+      res=len(liste)
+  return res",student2,moyenne,6fc4a139f72ee6e245b9f97fcc15712e
+,1,2020-05-04 21:58:47,"def moyenne(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=0
+    for elem in liste:
+      res+=elem
+    res/=len(liste)
+  return res",student1,moyenne,6fc4a139f72ee6e245b9f97fcc15712e
+,0,2020-05-04 21:58:35,"def moyenne(liste):
+  if liste==[]:
+    res=None
+  res=0
+  for elem in liste:
+    res+=elem
+  res=res/len(liste)
+  return res",student2,moyenne,6fc4a139f72ee6e245b9f97fcc15712e
+,1,2020-05-04 21:57:17,"def moyenne(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=0
+    for elem in liste:
+      res+=elem
+    res=res/len(liste)
+  return res",student1,moyenne,6fc4a139f72ee6e245b9f97fcc15712e
+,1,2020-05-04 21:54:13,"def maximum(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=liste[0]
+    for i in range(1,len(liste)):
+      if liste[i]>res:
+        res=liste[i]
+  return res",student2,maximum,d85f680ac36024b0de3381b816e252ce
+,1,2020-05-04 21:54:00,"def minimum(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=liste[0]
+    for i in range(1,len(liste)):
+      if liste[i]<res:
+        res=liste[i]
+  return res",student2,minimum,582dcbc047b264a41a011f56f86574ba
+,0,2020-05-04 21:51:53,"def minimum(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=liste[0]
+    for i in range(1,len(liste)):
+      if liste[i]<liste[i+1]:
+        res=liste[i]
+  return res",student2,minimum,582dcbc047b264a41a011f56f86574ba
+,0,2020-05-04 21:51:43,"def minimum(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=liste[0]
+    for i in range(1,len(liste)):
+      if liste[i]>liste[i+1]:
+        res=liste[i]
+  return res",student2,minimum,582dcbc047b264a41a011f56f86574ba
+,1,2020-05-04 21:51:43,"def maximum(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=liste[0]
+    for i in range(1,len(liste)):
+      if liste[i]>res:
+        res=liste[i]
+  return res",student1,maximum,d85f680ac36024b0de3381b816e252ce
+,0,2020-05-04 21:51:34,"def minimum(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=liste[0]
+    for i in range(1,len(liste)):
+      if liste[i]<liste[i+1]:
+        res=liste[i]
+  return res",student2,minimum,582dcbc047b264a41a011f56f86574ba
+,1,2020-05-04 21:51:19,"def minimum(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=liste[0]
+    for i in range(1,len(liste)):
+      if liste[i]<res:
+        res=liste[i]
+  return res
+",student1,minimum,582dcbc047b264a41a011f56f86574ba
+,0,2020-05-04 21:50:46,"def minimum(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=liste[0]
+    for i in range(1,len(liste)-1):
+      if liste[i]<res:
+        res=liste[i]
+  return res
+",student1,minimum,582dcbc047b264a41a011f56f86574ba
+,0,2020-05-04 21:48:32,"def minimum(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=liste[0]
+    for i in range(1,len(liste)-1):
+      if liste[i]<res:
+        res=liste[i]
+  return res
+",student1,minimum,582dcbc047b264a41a011f56f86574ba
+,0,2020-05-04 21:47:09,"def minimum(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=liste[0]
+    for i in range(1,len(liste)-1):
+      if liste[i]<liste[i+1]:
+        res=liste[i]
+  return res",student2,minimum,582dcbc047b264a41a011f56f86574ba
+,0,2020-05-04 21:46:55,"def minimum(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=liste[0]
+    for i in range(1,len(liste)-1):
+      if liste[i]<res:
+        res=liste[i]
+  return res
+",student1,minimum,582dcbc047b264a41a011f56f86574ba
+,1,2020-05-04 21:45:34,"def nbVoyelles(mot):
+  res=0
+  for elem in mot:
+    if elem in 'aeiouy':
+      res+=1
+  return res",student2,nbVoyelles,74ee1a47420bfeadf184c999d5c6dce9
+,0,2020-05-04 21:44:59,"def nbVoyelles(mot):
+  res=0
+  for elem in mot:
+    if elem=='aeiouy':
+      res+=1
+  return res",student2,nbVoyelles,74ee1a47420bfeadf184c999d5c6dce9
+,1,2020-05-04 21:44:35,"def nbVoyelles(mot):
+  res=0
+  for elem in mot:
+    if elem in 'aeiouy':
+      res+=1
+  return res",student1,nbVoyelles,74ee1a47420bfeadf184c999d5c6dce9
+,1,2020-05-04 21:42:20,"def maximum(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=liste[0]
+    for i in range(1,len(liste)-1):
+      if liste[i]>liste[i+1]:
+        res=liste[i]
+  return res",student2,maximum,d85f680ac36024b0de3381b816e252ce
+,1,2020-05-04 21:41:57,"def maximum(liste):
+  if liste==[]:
+    res=None
+  else:
+    res=liste[0]
+    for i in range(1,len(liste)-1):
+      if liste[i]>res:
+        res=liste[i]
+  return res",student1,maximum,d85f680ac36024b0de3381b816e252ce
+,1,2020-05-04 21:34:57,"def somme(liste):
+  res=0
+  for elem in liste:
+    res+=elem
+  return res",student1,somme,0122ce71b76597453e8389b0fd99ca17
+,1,2020-05-04 21:34:26,"def somme(liste):
+  res=0
+  for elem in liste:
+    res+=elem
+  return res",student2,somme,0122ce71b76597453e8389b0fd99ca17
+,0,2020-05-04 21:34:00,"def somme(liste):
+  res=0
+  for elem in range(liste):
+    res+=elem
+  return res",student2,somme,0122ce71b76597453e8389b0fd99ca17
+,1,2020-05-04 21:32:27,"def semestreValide(ue1,ue2):
+  if ue1<10:
+    res=False
+  if ue1>=10 and ue2>=10 or ue1>=10 and ue2<10 and ue1+ue2>=20:
+    res=True
+  return res",student1,semestreValide,70ae7ad6cf504e0fa8cedebd8e8a825f
+,1,2020-05-04 21:31:35,"def semestreValide(ue1,ue2):
+  res=False
+  if ue1<10:
+    res=False
+  elif ue1>=10 and ue2>=10 or ue1+ue2>=20:
+    res=True
+  return res",student2,semestreValide,70ae7ad6cf504e0fa8cedebd8e8a825f
+,0,2020-05-04 21:30:57,"def semestreValide(ue1,ue2):
+  res=False
+  if ue1>=10 and ue2>=10 or ue1+ue2>=20:
+    res=True
+  elif ue1<10:
+    res=False
+  return res",student2,semestreValide,70ae7ad6cf504e0fa8cedebd8e8a825f
+,0,2020-05-04 21:30:45,"def semestreValide(ue1,ue2):
+  res=False
+  if ue1>=10 and ue2>=10 or ue1+ue2>=20:
+    res=True
+  elif ue1<10:
+    res=False
+  return res",student2,semestreValide,70ae7ad6cf504e0fa8cedebd8e8a825f
+,0,2020-05-04 21:29:37,"def semestreValide(ue1,ue2):
+  res=False
+  if ue1>=10 and ue2>=10 or ue1+ue2>=20:
+    res=True
+  return res",student2,semestreValide,70ae7ad6cf504e0fa8cedebd8e8a825f
+,1,2020-05-04 21:22:28,"def bissextile(annee):
+  res=False
+  if annee%4==0 and annee%100!=0 or annee%400==0:
+    res=True
+  return res",student2,bissextile,a7d37636649c0ada991520788deeb2d0
+,1,2020-05-04 21:22:24,"def bissextile(annee):
+  res=False
+  if annee%4==0 and annee%100!=0 or annee%400==0:
+    res=True
+  return res",student1,bissextile,a7d37636649c0ada991520788deeb2d0
+,0,2020-05-04 21:22:16,"def bissextile(annee):
+  res=False
+  if annee%4==0 and anne%100!=0 or annee%400==0:
+    res=True
+  return res",student2,bissextile,a7d37636649c0ada991520788deeb2d0
+,0,2020-05-04 21:22:13,"def bissextile(annee):
+  res=False
+  if annee%4==0 and annee%100!=0 or anne%400==0:
+    res=True
+  return res",student1,bissextile,a7d37636649c0ada991520788deeb2d0
+,0,2020-05-04 21:22:13,"def bissextile(annee):
+  res=False
+  if annee%4==0 anne%100!=0 or annee%400==0:
+    res=True
+  return res",student2,bissextile,a7d37636649c0ada991520788deeb2d0
+,1,2020-05-04 21:18:37,"def bissextile(annee):
+  res=False
+  if annee%4==0 and annee%100!=0:
+    res=True
+  elif annee%400==0:
+    res=True
+  return res",student1,bissextile,a7d37636649c0ada991520788deeb2d0
+,1,2020-05-04 21:13:41,"def nombrePair(n):
+  res=False
+  if n%2==0:
+    res=True
+  return res",student2,nombrePair,3001254263845e9a478696f81a704d33
+,0,2020-05-04 21:13:23,"def nombrePair(n):
+  res=False
+  if elem%2==0:
+    res=True
+  return res",student2,nombrePair,3001254263845e9a478696f81a704d33
+,1,2020-05-04 21:13:13,"def nombrePair(n):
+  res=True
+  if n%2!=0:
+    res=False
+  return res",student1,nombrePair,3001254263845e9a478696f81a704d33
