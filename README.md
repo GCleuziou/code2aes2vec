@@ -16,10 +16,13 @@ The code2vec module offers the following functionalities :
 ``import code2ars``
 
 #load the NewCaledonia-toyset50 (demonstration dataset) as a Dataset
+
 ``d = code2ars.Dataset('datasets/NewCaledonia-toyset50.csv')``
 
 #analyse the dataset by generating the ARS
+
 ``d.analysis()``
 
 #generate the corpus of corresponding ARS
+
 ``code2ars.dataset2corpus(d,'Datasets/Corpus/NewCaledonia-toyset50.cor')``
