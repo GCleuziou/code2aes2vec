@@ -6,7 +6,7 @@ import signal, trace, os, csv, fnmatch, sys
 import ast
 from ast2ars import ast2str, ast2lineStatements
 
-PATH = 'datasets/Solutions'			# folder into which the exercises' solutions and entries are definied
+PATH = 'Datasets/Solutions'			# folder into which the exercises' solutions and entries are definied
 MAX_LENGTH_TRACE = 1000 	# (in number of symbols) too long traces will be shortened (to deal with infinite loop)
 
 def str2file(s, filename):
@@ -36,14 +36,14 @@ class Attempt:
 			print(self.astree)
 			print('Runnability ->',self.runnable)
 
-	def analysis(self):
+	def analysis(self, detailed = False):
 		"""test the attempt on all entries of the exercise"""
 		#write the code of the attempt in a seperate file attempToTest.py
-		str2file(self.code, 'attemptToTest.py')
+		str2file(self.code, 'utils/attemptToTest.py')
 		#try to import the File
 		try :
-			import attemptToTest
-			reload(attemptToTest)
+			import utils.attemptToTest
+			reload(utils.attemptToTest)
 			self.importable = True
 			#extract the line statements from the AST
 			self.lineStatements = ast2lineStatements(ast.parse(self.code),lineDic=dict(), symbolDic=dict())
@@ -62,13 +62,13 @@ class Attempt:
 			elif isinstance(entry, tuple):
 				param = param[1:(len(param)-1)]
 
-			call = 'attemptToTest.'+str(self.exercise.name)+','+param
-			print('<->',call)
+			call = 'utils.attemptToTest.'+str(self.exercise.name)+','+param
+			if detailed: print('<->',call)
 			tracer = trace.Trace(count=False, trace=True)	#trace parameters
 			signal.signal(signal.SIGALRM, handler)	#for timeout management
 			signal.alarm(1)							#for timeout management --> 1 sec. <--
 			try :
-				with open('traces.dat', 'w') as filetrace:
+				with open('utils/traces.dat', 'w') as filetrace:
 					sys.stdout = filetrace
 					eval('tracer.runfunc('+call+')')
 				sys.stdout = origin_out
@@ -79,7 +79,7 @@ class Attempt:
 				self.runnable.append(False)
 				error1 = str(exc.__class__)[8:-2]
 				error2 = str(exc).replace(' ','_')
-				print('=============================>',error1,error2)
+				if detailed: print('=============================>',error1,error2)
 				if error2 == 'infinite_loop':
 					error1 = error2
 				self.errors.append(error1)
@@ -87,7 +87,7 @@ class Attempt:
 			signal.alarm(0)
 			#trace analysis----------------
 			ars = ''   # Abstract Running Sequence (ARS)
-			with open('traces.dat', 'r') as filetrace:
+			with open('utils/traces.dat', 'r') as filetrace:
 					firstLine = True
 					nb_symbols = 0
 					for line in filetrace:
@@ -203,10 +203,10 @@ class Exercise:
 			n += 1 if a.astree else 0
 		return n
 
-	def analysis(self):
+	def analysis(self, detailed = False):
 		"""analyze each attemps from exercise"""
 		for att in self.attempts:
-			att.analysis()
+			att.analysis(detailed)
 
 	def __init__(self, exerciseID, exerciseName):
 		self.ID = exerciseID
@@ -241,10 +241,10 @@ class Dataset:
 			e.loadAttempts(csvfilename, reset = True)
 		self.dataset = data
 
-	def analysis(self):
+	def analysis(self, detailed = False):
 		"""analyze each attemps from each exercise"""
 		for  e in self.dataset.values():
-			e.analysis()
+			e.analysis(detailed)
 
 	def __init__(self, csvfilename, filter=[]):
 		self.dataset = dict()
