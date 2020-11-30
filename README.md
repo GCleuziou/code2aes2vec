@@ -2,9 +2,9 @@
 Python modules for program embeddings computation using the code2ars2vec method presented in [Cleuziou&Flouvat,2021].
 
 ### Functionalities :
-The code2ars2vec modules offers the following functionalities :
+The code2ars2vec modules offer the following functionalities :
 1. load a set of student programs from a (preformated) .json file as 'Attempt Dataset' 
-2. load a set of exercises from a (preformated) .json file as a 'Exercise Dataset'
+2. load a set of exercises from a (preformated) .json file as 'Exercise Dataset'
 2. generate the ARS (Abstract Running Sequence) of a student program by analyzing program execution traces on a set of test cases
 4. train an embedding model from a training dataset of ARS
 5. infer embeddings of new ARS given a pre-trained model
@@ -27,7 +27,7 @@ Generate the ARS of the first student program :
 Use the pre-computed ARS and train an embedding model on the training set :
 ```sh
 >>> from ars2vec import learnModel, inferVectors
->>> model = model = learnModel(NC1014)
+>>> model = learnModel(NC1014)
 ```
 Infer the embeddings of the test set given the trained model :
 ```sh
