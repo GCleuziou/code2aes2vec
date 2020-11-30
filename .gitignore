@@ -1,2 +1,7 @@
 __pycache__/
-utils/
+utils/attemptToTest.py
+utils/traces.dat
+utils/train.cor
+utils/test.cor
+Datasets/Dublin_42487.json
+Datasets/NewCaledonia_5690.json
