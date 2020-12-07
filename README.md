@@ -1,13 +1,13 @@
-# code2ars2vec
-Python modules for program embeddings computation using the code2ars2vec method presented in [Cleuziou&Flouvat,2021].
+# code2aes2vec
+Python modules for program embeddings computation using the code2aes2vec method presented in [Cleuziou&Flouvat,2021].
 
 ### Functionalities :
-The code2ars2vec modules offer the following functionalities :
+The code2aes2vec modules offer the following functionalities :
 1. load a set of student programs from a (preformated) .json file as 'Attempt Dataset' 
 2. load a set of exercises from a (preformated) .json file as 'Exercise Dataset'
-2. generate the ARS (Abstract Running Sequence) of a student program by analyzing program execution traces on a set of test cases
-4. train an embedding model from a training dataset of ARS
-5. infer embeddings of new ARS given a pre-trained model
+2. generate the AES (Abstract Execution Sequence) of a student program by analyzing program execution traces on a set of test cases
+4. train an embedding model from a training dataset of AES
+5. infer embeddings of new AES given a pre-trained model
 
 ### Processing example on the NewCaledonia_1014 dataset:
 Load the NewCaledonia_1014 (Attempt) dataset :
@@ -19,14 +19,14 @@ Load the NewCaledonia (Exercise) dataset :
 ```sh
 >>> NCExercises = jsonExercises2data('Datasets/NewCaledonia_exercises.json')
 ```
-Generate the ARS of the first student program :
+Generate the AES of the first student program :
 ```sh
->>> from code2ars import Code2Ars
->>> ars = Code2Ars(NC1014[0],NCExercises)
+>>> from code2aes import Code2Aes
+>>> aes = Code2Aes(NC1014[0],NCExercises)
 ```
-Use the pre-computed ARS and train an embedding model on the training set :
+Use the pre-computed AES and train an embedding model on the training set :
 ```sh
->>> from ars2vec import learnModel, inferVectors
+>>> from aes2vec import learnModel, inferVectors
 >>> model = learnModel(NC1014)
 ```
 Infer the embeddings of the test set given the trained model :
@@ -36,10 +36,10 @@ Infer the embeddings of the test set given the trained model :
 
 ### Citation :
 
-Please cite the following reference when using the code2ars2vec modules :
+Please cite the following reference when using the code2aes2vec modules :
 
 ```sh
-@inproceedings{cleuziou2021code2ars2vec,
+@inproceedings{cleuziou2021code2aes2vec,
   author    = {Cleuziou, Guillaume and Flouvat, Fr{\'{e}}d{\'{e}}ric},
   editor    = {},
   title     = {Apprentissage d'embeddings de codes pour l'enseignement de la programmation : une approche fond{\'{e}}e sur l'analyse des traces d'ex{\'{e}}cution},

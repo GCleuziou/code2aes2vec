@@ -3,13 +3,13 @@
 
 import gensim, re, smart_open
 
-def data2cor(data,outputfile,selectionfield='eval_set',selectionsets=['training'],valuefield='ars2'):
-    """build a corpus of descriptions (typically ARS) from the full or a selected part of the dataset
+def data2cor(data,outputfile,selectionfield='eval_set',selectionsets=['training'],valuefield='aes2'):
+    """build a corpus of descriptions (typically AES) from the full or a selected part of the dataset
     - data           : the dataset containing learners' attempts
     - outputfile     : the .cor file to generate
     - selectionfield : (default 'eval_set') a field (key) in data to serve as filter
     - selectionsets  : (default ['training']) values to consider in the filter
-    - valuefield     : (default 'ars2') the filed (key) that contains the attempt's desription to report in the corpus        
+    - valuefield     : (default 'aes2') the filed (key) that contains the attempt's desription to report in the corpus        
     """
     with open(outputfile,'w') as f:
         for att in data:
@@ -33,12 +33,12 @@ def read_corpus(fname, tokens_only=False):
 
 # Final functions =================================================================================
 
-def learnModel(data, selectionfield='eval_set', selectionsets=['training'], valuefield='ars2', vsize=100, cwindow=5, niter=500):
-    """learn an 'ars2vec' model from the full or a selected part of the dataset
+def learnModel(data, selectionfield='eval_set', selectionsets=['training'], valuefield='aes2', vsize=100, cwindow=5, niter=500):
+    """learn an 'aes2vec' model from the full or a selected part of the dataset
     - data           : the dataset containing learners' attempts
     - selectionfield : (default 'eval_set') a field (key) in data to serve as filter
     - selectionsets  : (default ['training']) values to consider in the filter
-    - valuefield     : (default 'ars2') the filed (key) that contains the attempt's desription to report in the corpus        
+    - valuefield     : (default 'aes2') the filed (key) that contains the attempt's desription to report in the corpus        
     - vsize          : (default 100) dimension of expected embeddings
     - cwindow        : (default 5) size of the context window : nb tokens before/after the token to predict
     - niter          : (default 500) nb. epochs for the learning process
@@ -52,7 +52,7 @@ def learnModel(data, selectionfield='eval_set', selectionsets=['training'], valu
     model.train(train_corpus, total_examples=model.corpus_count, epochs=model.epochs)
     return model
 
-def inferVectors(model, data, selectionfield='eval_set', selectionsets=['test'], valuefield='ars2'):
+def inferVectors(model, data, selectionfield='eval_set', selectionsets=['test'], valuefield='aes2'):
     """Infer new embedding vectors of full or a selected part of the dataset given a pre-trained model
     - model          : the pre-trained model (typically obtaind by learnModel())
     - data           : the dataset containing learners' attempts

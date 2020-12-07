@@ -1,5 +1,5 @@
 # Datasets presentation
-Pre-processed datasets for program embedding construction with the code2ars2vec method.
+Pre-processed datasets for program embedding construction with the code2aes2vec method.
 
 | Datasets |
 | ------ |
@@ -9,10 +9,10 @@ Pre-processed datasets for program embedding construction with the code2ars2vec 
 | [Dublin Exercises][DBEx]|
 | [Dublin Attempts 42487][DB42487]|
 
-  [NCEx]: <https://github.com/GCleuziou/code2ars2vec/blob/master/Datasets/NewCaledonia_exercises.json>
-  [NC1014]: <https://github.com/GCleuziou/code2ars2vec/blob/master/Datasets/NewCaledonia_1014.json>
+  [NCEx]: <https://github.com/GCleuziou/code2aes2vec/blob/master/Datasets/NewCaledonia_exercises.json>
+  [NC1014]: <https://github.com/GCleuziou/code2aes2vec/blob/master/Datasets/NewCaledonia_1014.json>
   [NC5690]: <https://www.dropbox.com/s/uteg76p1a8bolhe/newcaledonia_5690.json?dl=0>
-  [DBEx]: <https://github.com/GCleuziou/code2ars2vec/blob/master/Datasets/Dublin_exercises.json>
+  [DBEx]: <https://github.com/GCleuziou/code2aes2vec/blob/master/Datasets/Dublin_exercises.json>
   [DB42487]: <https://www.dropbox.com/s/9vc90ns7gwsci9o/dublin_42487.json?dl=0>
   
 ### NewCaledonia Dataset :
@@ -38,13 +38,13 @@ For each dataset, two JSON files are available :
    - upload : the submitted script
    - user : the student identifier
    - eval_set : indicating to which evaluation set the attempt belongs, given a pre-division of the dataset into three sets (training - 90%, validation - 5%, test - 5%)
-   - ars0, ars1, ars2 : each field containing an Abstract Running Sequence (ARS) obtained by analyzing program execution traces on a set of test cases (three levels of abstraction)
+   - aes0, aes1, aes2 : each field containing an Abstract Running Sequence (AES) obtained by analyzing program execution traces on a set of test cases (three levels of abstraction)
  
 
  - Dataset_exercises.json (ex. NewCaledonia_exercises.json) : a Python list in which each element is a dictionary defining an exercise on the plateform using (at least) the following fields (dictionary keys) :
    - solution : the exercise solution provided by the teacher (when available)
    - funcname : the name of the function the student has to write
-   - entries : a list of testcase (usefull for either evaluation or ARS construction)
+   - entries : a list of testcase (usefull for either evaluation or AES construction)
    - exo_name : identifying the exercise
 
 ### Citation :
@@ -52,7 +52,7 @@ For each dataset, two JSON files are available :
 Please cite the following reference when using one of these pre-processed datasets :
 
 ```sh
-@inproceedings{cleuziou2021code2ars2vec,
+@inproceedings{cleuziou2021code2aes2vec,
   author    = {Cleuziou, Guillaume and Flouvat, Fr{\'{e}}d{\'{e}}ric},
   editor    = {},
   title     = {Apprentissage d'embeddings de codes pour l'enseignement de la programmation : une approche fond{\'{e}}e sur l'analyse des traces d'ex{\'{e}}cution},
