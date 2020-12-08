@@ -24,7 +24,11 @@ NewCaledonia_1014 is a selection of the New Caledonia datasets containing only t
 
 ### Dublin Dataset :
 
+<<<<<<< HEAD
 The Dublin dataset is a subset of the [Azcona&Smeaton's Dataset](https://figshare.com/articles/dataset/_5_Million_Python_Bash_Programming_Submissions_for_5_Courses_Grades_for_Computer-Based_Exams_over_3_academic_years_/12610958). It includes student programs from the University of Dublin, carried out between 2016 and 2019. Although the original corpus, made available in July 2020, contains nearly 600,000 programs (Python and Bash), we propose here a subset of 42,487 programs enriched semi-automatically with test cases. 
+=======
+The Dublin dataset is a subset of the [Azcona&Smeaton's Dataset](https://figshare.com/articles/dataset/_5_Million_Python_Bash_Programming_Submissions_for_5_Courses_Grades_for_Computer-Based_Exams_over_3_academic_years_/12610958). It includes student programs from the University of Dublin, carried out between 2016 and 2019. Although the original corpus, made available in July 2020, contains nearly 600,000 programs (Python and Bash), we propose here a subset of 42,487 programs, enriched semi-automatically with test cases. 
+>>>>>>> 150f68498ccaedf05a87bebf068abdab970068e0
 
 ### Format :
 
