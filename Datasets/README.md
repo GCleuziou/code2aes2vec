@@ -24,7 +24,7 @@ NewCaledonia_1014 is a selection of the New Caledonia datasets containing only t
 
 ### Dublin Dataset :
 
-The Dublin dataset is a subset of the [Azcona&Smeaton's Dataset](https://figshare.com/articles/dataset/_5_Million_Python_Bash_Programming_Submissions_for_5_Courses_Grades_for_Computer-Based_Exams_over_3_academic_years_/12610958). It includes student programs from the University of Dublin, carried out between 2016 and 2019. Although the original corpus, made available in July 2020, contains nearly 600,000 programs (Python and Bash), we propose here an enriched subset of 42,487 programs. 
+The Dublin dataset is a subset of the [Azcona&Smeaton's Dataset](https://figshare.com/articles/dataset/_5_Million_Python_Bash_Programming_Submissions_for_5_Courses_Grades_for_Computer-Based_Exams_over_3_academic_years_/12610958). It includes student programs from the University of Dublin, carried out between 2016 and 2019. Although the original corpus, made available in July 2020, contains nearly 600,000 programs (Python and Bash), we propose here a subset of 42,487 programs enriched semi-automatically with test cases. 
 
 ### Format :
 
@@ -38,7 +38,7 @@ For each dataset, two JSON files are available :
    - upload : the submitted script
    - user : the student identifier
    - eval_set : indicating to which evaluation set the attempt belongs, given a pre-division of the dataset into three sets (training - 90%, validation - 5%, test - 5%)
-   - aes0, aes1, aes2 : each field containing an Abstract Running Sequence (AES) obtained by analyzing program execution traces on a set of test cases (three levels of abstraction)
+   - aes0, aes1, aes2 : each field containing an Abstract Execution Sequence (AES) obtained by analyzing program execution traces on a set of test cases (three levels of abstraction)
  
 
  - Dataset_exercises.json (ex. NewCaledonia_exercises.json) : a Python list in which each element is a dictionary defining an exercise on the plateform using (at least) the following fields (dictionary keys) :
