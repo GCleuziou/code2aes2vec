@@ -4,7 +4,7 @@
 import json
 
 def json2data(filename):
-    """ loads a json file into a list (od dictionaries) """
+    """ loads a json file into a list (of dictionaries) """
     with open(filename,'r') as json_file:
         data = json.load(json_file)
     return data
