@@ -39,15 +39,20 @@ Infer the embeddings of the test set given the trained model :
 Please cite the following reference when using the code2aes2vec modules :
 
 ```sh
-@inproceedings{cleuziou2021code2aes2vec,
-  author    = {Cleuziou, Guillaume and Flouvat, Fr{\'{e}}d{\'{e}}ric},
-  editor    = {},
-  title     = {Apprentissage d'embeddings de codes pour l'enseignement de la programmation : une approche fond{\'{e}}e sur l'analyse des traces d'ex{\'{e}}cution},
-  booktitle = {21{\`{e}}me conf{\'{e}}rence Extraction et Gestion des Connaissances,{EGC} 2021, Montpellier, France, January 25-29, 2021},
-  series    = {{RNTI}},
-  volume    = {},
-  pages     = {(to appear)},
-  publisher = {{\'{E}}ditions {RNTI}},
-  year      = {2021}
-  }
+@inproceedings{DBLP:conf/edm/CleuziouF21,
+  author    = {Guillaume Cleuziou and
+               Fr{\'{e}}d{\'{e}}ric Flouvat},
+  editor    = {Sharon I{-}Han Hsiao and
+               Shaghayegh (Sherry) Sahebi and
+               Fran{\c{c}}ois Bouchet and
+               Jill{-}J{\^{e}}nn Vie},
+  title     = {Learning student program embeddings using abstract execution traces},
+  booktitle = {Proceedings of the 14th International Conference on Educational Data
+               Mining, {EDM} 2021, virtual, June 29 - July 2, 2021},
+  publisher = {International Educational Data Mining Society},
+  year      = {2021},
+  timestamp = {Wed, 09 Mar 2022 16:47:22 +0100},
+  biburl    = {https://dblp.org/rec/conf/edm/CleuziouF21.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
 ```
