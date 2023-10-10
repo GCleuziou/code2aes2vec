@@ -510,7 +510,7 @@ def Code2Aes(attempt, exercises, aeslevel=2, field='exercise_name'):
     # generates the Abstract Running Sequence on testcases ========================================
     aes = ''
 	# origin_out = sys.stdout
-    for entry in exercise['entries'][0:1]:
+    for entry in exercise['entries']:
         # generate the trace for the entry ====================================
         if not isinstance(entry,tuple):
             entry = (entry,)
